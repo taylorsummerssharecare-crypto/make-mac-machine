@@ -12,6 +12,7 @@ A small cross-platform tool that allows to quickly create virtual macOS machines
 6. macOS 13 (Ventura)
 7. macOS 14 (Sonoma)
 8. macOS 15 (Sequoia)
+9. macOS 26 (Tahoe)
 
 ## Description
 
@@ -26,20 +27,21 @@ The standalone release versions for Windows and macOS have tools `dmg2img` and `
 
 ### a) Windows
 - Windows 10/11
-- [VMware Workstation Pro 17.5](https://support.broadcom.com/group/ecx/productdownloads?subfamily=VMware+Workstation+Pro) or later (now [free](https://blogs.vmware.com/workstation/2024/05/vmware-workstation-pro-now-available-free-for-personal-use.html) as in beer)
+- [VMware Workstation Pro 17.5](https://support.broadcom.com/group/ecx/productdownloads?subfamily=VMware+Workstation+Pro) or later, 25H2 recommended (now [free](https://blogs.vmware.com/workstation/2024/05/vmware-workstation-pro-now-available-free-for-personal-use.html) as in beer)
 - macOS support in Workstation unlocked with DrDonk's [unlocker](https://github.com/DrDonk/unlocker/)  
-  (Download [unlocker427.zip](https://github.com/DrDonk/unlocker/releases/tag/v4.2.7), unzip, go to subdir "windows" and run "unlock.exe")
+  (Download [unlocker427.zip](https://github.com/DrDonk/unlocker/releases/tag/v4.2.7), unzip, go to subdir "windows" and run "unlock.exe")  
+  Note: although Unlocker 4.2.7 was released in 2023, it works perfectly fine with latest version 25H2 of VMware Workstation Pro.
 - Internet connection
 - Current directory must be writable
 
 ### b) macOS
 - Recent macOS system
-- [VMware Fusion Pro 13.5](https://support.broadcom.com/group/ecx/productdownloads?subfamily=VMware+Fusion) or later (now [free](https://blogs.vmware.com/workstation/2024/05/vmware-workstation-pro-now-available-free-for-personal-use.html) as in beer)
+- [VMware Fusion Pro 13.5](https://support.broadcom.com/group/ecx/productdownloads?subfamily=VMware+Fusion) or later, 25H2 recommended (now [free](https://blogs.vmware.com/workstation/2024/05/vmware-workstation-pro-now-available-free-for-personal-use.html) as in beer)
 - Internet connection
 - Current directory must be writable
 
 ### c) Linux
-- [VMware Workstation Pro 17.5](https://support.broadcom.com/group/ecx/productdownloads?subfamily=VMware+Workstation+Pro) or later (now [free](https://blogs.vmware.com/workstation/2024/05/vmware-workstation-pro-now-available-free-for-personal-use.html) as in beer)
+- [VMware Workstation Pro 17.5](https://support.broadcom.com/group/ecx/productdownloads?subfamily=VMware+Workstation+Pro) or later, 25H2 recommended (now [free](https://blogs.vmware.com/workstation/2024/05/vmware-workstation-pro-now-available-free-for-personal-use.html) as in beer)
 - macOS support in Workstation unlocked with DrDonk's [unlocker](https://github.com/DrDonk/unlocker/)  
   (Download [unlocker427.tgz](https://github.com/DrDonk/unlocker/releases/tag/v4.2.7), extract, go to subdir "linux" and run `sudo ./unlock`)
 - Internet connection

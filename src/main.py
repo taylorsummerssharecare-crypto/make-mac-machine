@@ -503,6 +503,7 @@ def main():
             {"name": "Ventura (13)",        "b": "Mac-4B682C642B45593E", "m": "00000000000000000", "os_type": "latest", "short": "ventura",     "ver": "13"},
             {"name": "Sonoma (14)",         "b": "Mac-827FAC58A8FDFA22", "m": "00000000000000000", "short": "sonoma",                           "ver": "14"},
             {"name": "Sequoia (15)",        "b": "Mac-7BA5B2D9E42DDD94", "m": "00000000000000000", "short": "sequoia", "os_type": "latest",     "ver": "15"},
+            {"name": "Tahoe (26)",          "b": "Mac-CFF7D910A743CAAF", "m": "00000000000000000", "short": "tahoe", "os_type": "latest",       "ver": "26"},
     ]
 
     for index, product in enumerate(products):
@@ -544,7 +545,7 @@ def main():
     chunklist_file = os.path.join(TMP_DIR, product["short"] + '.chunklist')
     img_file = os.path.join(TMP_DIR, product["short"] + '.img')
 
-    disk_src_file = os.path.join(DSK_DIR, 'disk.vmdk.gz')
+    disk_src_file = os.path.join(DSK_DIR, 'disk-apfs.vmdk.gz' if product["ver"] == '26' else 'disk.vmdk.gz')
     vmx_src_file = os.path.join(VMX_DIR, f'macOS-{product["ver"]}.vmx')
 
     recovery_dst_file = os.path.join(MACHINE_DIR, f'recovery-{product["ver"]}.vmdk')
@@ -555,7 +556,7 @@ def main():
     # Create machine folder
     ############################################
     os.mkdir(MACHINE_DIR)
-    
+
     ############################################
     # Copy .vmx config file
     ############################################
@@ -588,13 +589,13 @@ def main():
     with gzip.open(disk_src_file, 'rb') as f_src:
         with open(disk_dst_file, 'wb') as f_dst:
             f_dst.write(f_src.read())
-            
+
     ############################################
     # High Sierra fix: provided .nvram overwrites download URL (http:// instead of https://)
     ############################################
     if product["ver"] == "10.13":
         shutil.copyfile(os.path.join(VMX_DIR, 'macOS-10.13.nvram'), os.path.join(MACHINE_DIR, 'macOS-10.13.nvram'))
-        
+
     ############################################
     # Try to open new machine in VMWare Workstation/Fusion
     ############################################
