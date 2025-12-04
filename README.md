@@ -70,8 +70,9 @@ After macOS was successfully installed, power off the machine, go to its setting
 
 Some hints for improving the performance of a freshly created macOS VM:
 
-- Install VMware Tools inside the macOS guest system (Workstation/Fusion menu -> VM -> Install VMware Tools...)
-- Turn off features in macOS that waste CPU power by running this in macOS Terminal:
+- Install [VMware Tools](https://packages-prod.broadcom.com/tools/frozen/darwin/) inside the macOS guest system: download [darwin.iso](https://packages-prod.broadcom.com/tools/frozen/darwin/darwin.iso) - or [darwinPre15.iso](https://packages-prod.broadcom.com/tools/frozen/darwin/darwinPre15.iso) in case of macOS 10.13 and 10.14 -, mount it as CD-ROM in the macOS guest and run the"Install VMware Tools.app".
+
+- Turn off features in the macOS guest that waste CPU power by running this in macOS Terminal:
 
   ```
   # massively increase virtualized macOS performance by disabling spotlight (indexing)
